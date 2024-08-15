@@ -4,7 +4,8 @@ import com.example.secondspringAirlinesproject.Dto.AirlinesDto;
 import com.example.secondspringAirlinesproject.entity.Airlines;
 
 public class AirlinesMapper {
-
+// DTO is a Data transfer Object
+// This is helpful for separating data access logic from data transfer logic, making the application more modular and maintainable.
     // Convert Airlines entity to AirlinesDto
     public static AirlinesDto mapToAirlinesDto(Airlines airline) {
         if (airline == null) {
