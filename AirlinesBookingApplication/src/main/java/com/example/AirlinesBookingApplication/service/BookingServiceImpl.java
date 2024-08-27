@@ -33,8 +33,8 @@ public class BookingServiceImpl implements BookingService {
     @Autowired
     private PaymentService paymentService;
 
-//    @Autowired
-//    private EmailService emailService;
+    @Autowired
+    private EmailService emailService;
 
     @Override
     public Booking createBooking(Long userId, Long flightId, LocalDateTime bookingDate, String status) {
@@ -62,16 +62,16 @@ public class BookingServiceImpl implements BookingService {
         booking.setStatus(status);
 
         Booking savedBooking = bookingRepository.save(booking);
-//
-//        // Send email to user after booking is created
-//        String subject = "Booking Confirmation";
-//        String text = String.format("Dear %s,\n\nYour booking with flight number %s has been confirmed." +
-//                        "\n\nBooking Date: %s\nFlight Details:\n- Departure: %s\n- " +
-//                        "Destination: %s\n\nThank you for booking with us.",
-//                user.getFullName(), flight.getFlightNumber(),
-//                bookingDate, flight.getDepartureCity(), flight.getDestinationCity());
-//
-//        emailService.sendBookingConfirmation(user.getEmail(), subject, text);
+
+        // Send email to user after booking is created
+        String subject = "Booking Confirmation";
+        String text = String.format("Dear %s,\n\nYour booking with flight number %s has been confirmed." +
+                        "\n\nBooking Date: %s\nFlight Details:\n- Departure: %s\n- " +
+                        "Destination: %s\n\nThank you for booking with us.",
+                user.getFullName(), flight.getFlightNumber(),
+                bookingDate, flight.getDepartureCity(), flight.getDestinationCity());
+
+        emailService.sendBookingConfirmation(user.getEmail(), subject, text);
 
         return savedBooking;
     }
@@ -135,5 +135,4 @@ public class BookingServiceImpl implements BookingService {
 
         return bookingRepository.findByUser(user);
     }
-    }
-
+}
