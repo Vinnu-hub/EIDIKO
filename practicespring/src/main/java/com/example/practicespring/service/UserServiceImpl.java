@@ -1,11 +1,14 @@
 package com.example.practicespring.service;
 
 
+import com.example.practicespring.entity.User;
+//import com.example.practicespring.entity.Usernew;
 import com.example.practicespring.repository.UserRepository;
+//import com.example.practicespring.repository.UsernewRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.practicespring.entity.User;
+//import com.example.practicespring.entity.User;
 
 
 @Service
@@ -13,7 +16,7 @@ public class UserServiceImpl implements UserService
 {
 
      @Autowired
-      private UserRepository  userRepository;
+      private UserRepository userRepository;
 
     @Override
     public void CreateUser(User user)

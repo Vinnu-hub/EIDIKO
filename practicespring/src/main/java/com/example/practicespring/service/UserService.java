@@ -1,6 +1,7 @@
 package com.example.practicespring.service;
 
 import com.example.practicespring.entity.User;
+//mport com.example.practicespring.entity.Usernew;
 
 public interface UserService
 {

@@ -1,15 +1,15 @@
 package com.example.practicespring.service;
 
-import com.example.practicespring.entity.RegisterDocuments;
-import com.example.practicespring.entity.Registration;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.util.Optional;
+public interface RegistrationDocumentService {
 
-public interface RegistrationDocumentService
-{
+    // Method to handle image file upload and text extraction
+    String extractTextFromImage(MultipartFile file);
 
-    void uploadDocument(MultipartFile file,Long registration_id, String documentType);
+    // Method to handle PDF file upload and text extraction
+    String extractTextFromPDF(MultipartFile file);
 
-    Optional<RegisterDocuments> getDocumentById(Long id);
+    // Method to upload document details and update registration status
+    String uploadDocument(MultipartFile file, Long registrationId);
 }

@@ -1,11 +1,13 @@
 package com.example.practicespring.entity;
 
+//import jakarta.persistence.*;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+//import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @AllArgsConstructor
@@ -24,7 +26,7 @@ public class RegisterDocuments {
     private String fileExtension;
 
     @Lob
-    private String data;
+    private String data;  // Extracted text data from the file
 
     private LocalDateTime uploadedTime;
 
@@ -33,4 +35,8 @@ public class RegisterDocuments {
     @ManyToOne
     @JoinColumn(name = "registration_id", nullable = false)
     private Registration registration;
+
+    public void setTextData(String text) {
+        this.data = text;
+    }
 }

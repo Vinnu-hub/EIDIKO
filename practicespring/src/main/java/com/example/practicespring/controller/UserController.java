@@ -1,6 +1,8 @@
 package com.example.practicespring.controller;
 
+//import com.example.practicespring.entity.User;
 import com.example.practicespring.entity.User;
+//import com.example.practicespring.entity.Usernew;
 import com.example.practicespring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +23,7 @@ public class UserController
 
 
      @PostMapping("/saves")
-    public ResponseEntity<User> CreateUser( @RequestBody User user)
+    public ResponseEntity<User> CreateUser(@RequestBody User user)
      {
          userService.CreateUser(user);
           return ResponseEntity.ok(user);
