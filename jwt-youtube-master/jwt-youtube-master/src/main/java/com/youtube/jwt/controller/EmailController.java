@@ -15,7 +15,9 @@ public class EmailController
     @Autowired
     private GmailReader gmailReader;
 
-    @GetMapping("/search")
+
+
+    @GetMapping("/read")
     public String fetchEmails()
     {
         try

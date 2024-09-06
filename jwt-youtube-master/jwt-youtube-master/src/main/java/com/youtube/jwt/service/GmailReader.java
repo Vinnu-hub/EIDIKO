@@ -12,15 +12,15 @@ public class GmailReader
 {
 
     private static final String HOST = "imap.gmail.com";
-    private static final String USERNAME = "gugulothvinay25@gmail.com";
-    private static final String PASSWORD = "aLqx rygh kwgf jqjw";
+    private static final String USERNAME = "gugulothvinay.eidiko@gmail.com";
+    private static final String PASSWORD = "cqpn afte qzto gkwz";
     private static final String KEYWORD = "Good Name";
 
     public String fetchEmails() throws Exception {
         Properties properties = new Properties();
         properties.put("mail.store.protocol", "imaps");
         properties.put("mail.imaps.host", HOST);
-        properties.put("mail.imaps.port", "993");
+        properties.put("mail.imaps.port", "587");
 
         Session session = Session.getInstance(properties);
         Store store = session.getStore("imaps");
