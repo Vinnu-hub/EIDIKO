@@ -1,0 +1,12 @@
+com\example\demoSpring1\DemoSpring1Application.class
+com\example\demoSpring1\repository\registrationRepository.class
+com\example\demoSpring1\exception\UseridNotFound.class
+com\example\demoSpring1\entity\Document.class
+com\example\demoSpring1\service\RegistrationServiceImpl.class
+com\example\demoSpring1\service\RegistrationService.class
+com\example\demoSpring1\service\DocumentServiceImpl.class
+com\example\demoSpring1\entity\Registration.class
+com\example\demoSpring1\service\DocumentService.class
+com\example\demoSpring1\controller\DocumentController.class
+com\example\demoSpring1\controller\RegistrationController.class
+com\example\demoSpring1\repository\DocumentsRepository.class
